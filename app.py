@@ -85,7 +85,7 @@ def create_app(test_config=None):
     # actor.movies = [movies]
     actor.insert()
     return jsonify({
-                'Existinggg': existing_actor,
+                'Existing': existing_actor,
                 'success ': True
             }),200
 
@@ -112,6 +112,7 @@ def create_app(test_config=None):
     # movie.actors = [actors]
     movie.insert()
     return jsonify({
+                'Existing': existing_movie,
                 'success ': True
             }),200
 
