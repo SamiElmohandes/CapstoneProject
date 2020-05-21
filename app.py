@@ -67,14 +67,18 @@ def create_app(test_config=None):
   @app.route('/actors', methods=['POST'])
   @requires_auth('post:actors')
   def create_actor(payload):
+   
+   body = request.get_json()
+   new_name = body.get('name', None)
+   new_age = body.get('age', None)
+   new_gender = body.get('gender', None)
+   existing_actor = Actor.query.filter(Actor.name == new_name).one_or_none()
+   if existing_actor:
+    abort (400)
+   
+   
    try:
-    body = request.get_json()
-    new_name = body.get('name', None)
-    new_age = body.get('age', None)
-    new_gender = body.get('gender', None)
-    existing_actor = Actor.query.filter(Actor.name == new_name).one_or_none()
-    if existing_actor:
-      abort (400)
+    
     actor = Actor(name=new_name, age=new_age, gender=new_gender)
     # movies = Movie.query.filter(Movie.id == body['movie_ID']).one_or_none()
     # actor.movies = [movies]
