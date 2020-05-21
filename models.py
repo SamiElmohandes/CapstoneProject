@@ -8,9 +8,9 @@ database_name = "castingagency"
 #database_path = "postgres://localhost:5432/castingagency"
 
 
-database_path ='postgresql://postgres@localhost:5432/castingagency'
+#database_path ='postgresql://postgres@localhost:5432/castingagency'
 
-#database_path = os.environ['DATABASE_URL']
+database_path = os.environ['DATABASE_URL']
 
 
 
