@@ -8,7 +8,9 @@ import json
 from auth import AuthError, requires_auth
 
 
-
+#Test for deploying 
+#Test
+#Test
 def create_app(test_config=None):
   # create and configure the app
   app = Flask(__name__)
@@ -62,7 +64,7 @@ def create_app(test_config=None):
 
   
 
-  @app.route('/actor', methods=['POST'])
+  @app.route('/actors', methods=['POST'])
   @requires_auth('post:actors')
   def create_actor(payload):
    try:
@@ -268,5 +270,5 @@ def create_app(test_config=None):
 app = create_app()
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=5000, debug=True)
-  #app.run(host='127.0.0.1', port=5000, debug=True)
+  #app.run(host='0.0.0.0', port=5000, debug=True)
+  app.run(host='127.0.0.1', port=5000, debug=True)
