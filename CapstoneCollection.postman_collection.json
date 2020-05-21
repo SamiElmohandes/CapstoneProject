@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "e10dc661-7e8e-4047-bfd0-d357354abf0f",
+		"name": "CapstoneCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PostActor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlR5WE5VaEJIWmxFaDRVYmVMOTJzLSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lLXByb2plY3QtZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVjMTRlMjY0NTNlMjMwYzcxZDkyN2EyIiwiYXVkIjoiY2FzdGluZ2FnZW5jeSIsImlhdCI6MTU5MDA3NDg5OSwiZXhwIjoxNTkwMTYxMjk5LCJhenAiOiJpUkRSRFczSnNKVjJ2S1FFN3EwMklqVnpRdEpZekIwUSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.W8zQ0TIrgJY6HzdZe701TqS2L2BYokm3uN64bsfmfUBEX2IIy3BnhyrWvfMqNEBlY3oESBgtOPlMemq7CZHo7e85kJsemI9sAemzGycvBFA7HdmpEs3Iympzgu06vMcNYsEqnVi1WRG4_eoRLTsrQzc8injyFd5GIQc1JCzUq2fmOB8R0XPTyf3SGl39p2gEWIwraH9PcAVxchZrIgQrpR7C-po-BcSuTW_VvIfl8kozzVohDUgqHkoXDFwnP2xeLCLw333zifWY1DsLlSnLtKzmICHaqrxl9VAHWehZOcZ6HdCjnwHojp7ZdVThzogjnbcTVCAO5gCzMvu57Tmc9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kararaaaaaa\",\r\n    \"age\": \"25/23\",\r\n    \"gender\": \"Male\"\r\n           \r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finalfsndagency.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"finalfsndagency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostMovie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlR5WE5VaEJIWmxFaDRVYmVMOTJzLSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lLXByb2plY3QtZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVjMTUxMTI0MGZhNTYwYzc1NjQ2ZDBlIiwiYXVkIjoiY2FzdGluZ2FnZW5jeSIsImlhdCI6MTU5MDEwMjk3MywiZXhwIjoxNTkwMTg5MzczLCJhenAiOiJpUkRSRFczSnNKVjJ2S1FFN3EwMklqVnpRdEpZekIwUSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ZWrdNiE7EI4WooeCu5tNbtrY9oNmraiOaWptI1ISbZGXqyyfFJU-LWaYMmIpm_fn1BD0R9Bq7Ut5Jpz9Sn4uo7mbD5VWc828T7EPIqbwulCAHUhQIRyl-Ia9VHSbSTnMLkXRpTfpVzQqmETj5ezTw8I2a5VeL13yQML3eeIcMT-U9s1LFOKibUXOPT5VgY2FvUu1FSCatfgMWJ9p10R2HqPoh1KT3EDV2_tQ2WLD1JvEfhxRzZkzdl4ox0aqSCm-FAVj3IRMyRXjqgoLHyzU7QvyfGEx9M1KweCYWEkjP6cjcexPKtD7rQBalyk4D181Met5FQ83HN7k-KLxM6zvnQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Ekhteyarrrrr\",\r\n    \"release_date\": \"25/23\"\r\n           \r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finalfsndagency.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"finalfsndagency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteActor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlR5WE5VaEJIWmxFaDRVYmVMOTJzLSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lLXByb2plY3QtZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVjMTRlMjY0NTNlMjMwYzcxZDkyN2EyIiwiYXVkIjoiY2FzdGluZ2FnZW5jeSIsImlhdCI6MTU5MDA3NDg5OSwiZXhwIjoxNTkwMTYxMjk5LCJhenAiOiJpUkRSRFczSnNKVjJ2S1FFN3EwMklqVnpRdEpZekIwUSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.W8zQ0TIrgJY6HzdZe701TqS2L2BYokm3uN64bsfmfUBEX2IIy3BnhyrWvfMqNEBlY3oESBgtOPlMemq7CZHo7e85kJsemI9sAemzGycvBFA7HdmpEs3Iympzgu06vMcNYsEqnVi1WRG4_eoRLTsrQzc8injyFd5GIQc1JCzUq2fmOB8R0XPTyf3SGl39p2gEWIwraH9PcAVxchZrIgQrpR7C-po-BcSuTW_VvIfl8kozzVohDUgqHkoXDFwnP2xeLCLw333zifWY1DsLlSnLtKzmICHaqrxl9VAHWehZOcZ6HdCjnwHojp7ZdVThzogjnbcTVCAO5gCzMvu57Tmc9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://finalfsndagency.herokuapp.com/actors/2",
+					"protocol": "https",
+					"host": [
+						"finalfsndagency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMovie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlR5WE5VaEJIWmxFaDRVYmVMOTJzLSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lLXByb2plY3QtZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVjMTUxMTI0MGZhNTYwYzc1NjQ2ZDBlIiwiYXVkIjoiY2FzdGluZ2FnZW5jeSIsImlhdCI6MTU5MDEwMjk3MywiZXhwIjoxNTkwMTg5MzczLCJhenAiOiJpUkRSRFczSnNKVjJ2S1FFN3EwMklqVnpRdEpZekIwUSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ZWrdNiE7EI4WooeCu5tNbtrY9oNmraiOaWptI1ISbZGXqyyfFJU-LWaYMmIpm_fn1BD0R9Bq7Ut5Jpz9Sn4uo7mbD5VWc828T7EPIqbwulCAHUhQIRyl-Ia9VHSbSTnMLkXRpTfpVzQqmETj5ezTw8I2a5VeL13yQML3eeIcMT-U9s1LFOKibUXOPT5VgY2FvUu1FSCatfgMWJ9p10R2HqPoh1KT3EDV2_tQ2WLD1JvEfhxRzZkzdl4ox0aqSCm-FAVj3IRMyRXjqgoLHyzU7QvyfGEx9M1KweCYWEkjP6cjcexPKtD7rQBalyk4D181Met5FQ83HN7k-KLxM6zvnQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://finalfsndagency.herokuapp.com/movies/1",
+					"protocol": "https",
+					"host": [
+						"finalfsndagency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchMovie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlR5WE5VaEJIWmxFaDRVYmVMOTJzLSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lLXByb2plY3QtZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVjMTRlMjY0NTNlMjMwYzcxZDkyN2EyIiwiYXVkIjoiY2FzdGluZ2FnZW5jeSIsImlhdCI6MTU5MDA3NDg5OSwiZXhwIjoxNTkwMTYxMjk5LCJhenAiOiJpUkRSRFczSnNKVjJ2S1FFN3EwMklqVnpRdEpZekIwUSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.W8zQ0TIrgJY6HzdZe701TqS2L2BYokm3uN64bsfmfUBEX2IIy3BnhyrWvfMqNEBlY3oESBgtOPlMemq7CZHo7e85kJsemI9sAemzGycvBFA7HdmpEs3Iympzgu06vMcNYsEqnVi1WRG4_eoRLTsrQzc8injyFd5GIQc1JCzUq2fmOB8R0XPTyf3SGl39p2gEWIwraH9PcAVxchZrIgQrpR7C-po-BcSuTW_VvIfl8kozzVohDUgqHkoXDFwnP2xeLCLw333zifWY1DsLlSnLtKzmICHaqrxl9VAHWehZOcZ6HdCjnwHojp7ZdVThzogjnbcTVCAO5gCzMvu57Tmc9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Ka\",\r\n    \"release_date\": \"25/2/2079\"\r\n           \r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finalfsndagency.herokuapp.com/movies/3",
+					"protocol": "https",
+					"host": [
+						"finalfsndagency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchActor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlR5WE5VaEJIWmxFaDRVYmVMOTJzLSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lLXByb2plY3QtZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVjMTRlMjY0NTNlMjMwYzcxZDkyN2EyIiwiYXVkIjoiY2FzdGluZ2FnZW5jeSIsImlhdCI6MTU5MDA3NDg5OSwiZXhwIjoxNTkwMTYxMjk5LCJhenAiOiJpUkRSRFczSnNKVjJ2S1FFN3EwMklqVnpRdEpZekIwUSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.W8zQ0TIrgJY6HzdZe701TqS2L2BYokm3uN64bsfmfUBEX2IIy3BnhyrWvfMqNEBlY3oESBgtOPlMemq7CZHo7e85kJsemI9sAemzGycvBFA7HdmpEs3Iympzgu06vMcNYsEqnVi1WRG4_eoRLTsrQzc8injyFd5GIQc1JCzUq2fmOB8R0XPTyf3SGl39p2gEWIwraH9PcAVxchZrIgQrpR7C-po-BcSuTW_VvIfl8kozzVohDUgqHkoXDFwnP2xeLCLw333zifWY1DsLlSnLtKzmICHaqrxl9VAHWehZOcZ6HdCjnwHojp7ZdVThzogjnbcTVCAO5gCzMvu57Tmc9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kar\",\r\n    \"age\": \"25\",\r\n    \"gender\": \"Female\"\r\n           \r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finalfsndagency.herokuapp.com/actors/3",
+					"protocol": "https",
+					"host": [
+						"finalfsndagency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetActor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlR5WE5VaEJIWmxFaDRVYmVMOTJzLSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lLXByb2plY3QtZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVjMTRlMjY0NTNlMjMwYzcxZDkyN2EyIiwiYXVkIjoiY2FzdGluZ2FnZW5jeSIsImlhdCI6MTU5MDA3NDg5OSwiZXhwIjoxNTkwMTYxMjk5LCJhenAiOiJpUkRSRFczSnNKVjJ2S1FFN3EwMklqVnpRdEpZekIwUSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.W8zQ0TIrgJY6HzdZe701TqS2L2BYokm3uN64bsfmfUBEX2IIy3BnhyrWvfMqNEBlY3oESBgtOPlMemq7CZHo7e85kJsemI9sAemzGycvBFA7HdmpEs3Iympzgu06vMcNYsEqnVi1WRG4_eoRLTsrQzc8injyFd5GIQc1JCzUq2fmOB8R0XPTyf3SGl39p2gEWIwraH9PcAVxchZrIgQrpR7C-po-BcSuTW_VvIfl8kozzVohDUgqHkoXDFwnP2xeLCLw333zifWY1DsLlSnLtKzmICHaqrxl9VAHWehZOcZ6HdCjnwHojp7ZdVThzogjnbcTVCAO5gCzMvu57Tmc9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://finalfsndagency.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"finalfsndagency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlR5WE5VaEJIWmxFaDRVYmVMOTJzLSJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lLXByb2plY3QtZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVjMTRlMjY0NTNlMjMwYzcxZDkyN2EyIiwiYXVkIjoiY2FzdGluZ2FnZW5jeSIsImlhdCI6MTU5MDA3NDg5OSwiZXhwIjoxNTkwMTYxMjk5LCJhenAiOiJpUkRSRFczSnNKVjJ2S1FFN3EwMklqVnpRdEpZekIwUSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.W8zQ0TIrgJY6HzdZe701TqS2L2BYokm3uN64bsfmfUBEX2IIy3BnhyrWvfMqNEBlY3oESBgtOPlMemq7CZHo7e85kJsemI9sAemzGycvBFA7HdmpEs3Iympzgu06vMcNYsEqnVi1WRG4_eoRLTsrQzc8injyFd5GIQc1JCzUq2fmOB8R0XPTyf3SGl39p2gEWIwraH9PcAVxchZrIgQrpR7C-po-BcSuTW_VvIfl8kozzVohDUgqHkoXDFwnP2xeLCLw333zifWY1DsLlSnLtKzmICHaqrxl9VAHWehZOcZ6HdCjnwHojp7ZdVThzogjnbcTVCAO5gCzMvu57Tmc9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finalfsndagency.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"finalfsndagency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
