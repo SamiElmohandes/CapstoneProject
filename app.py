@@ -62,7 +62,7 @@ def create_app(test_config=None):
 
   
 
-  @app.route('/actors', methods=['POST'])
+  @app.route('/actor', methods=['POST'])
   @requires_auth('post:actors')
   def create_actor(payload):
    try:
