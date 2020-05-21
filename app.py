@@ -73,7 +73,8 @@ def create_app(test_config=None):
    new_age = body.get('age', None)
    new_gender = body.get('gender', None)
    existing_actor = Actor.query.filter(Actor.name == new_name).one_or_none()
-   if existing_actor:
+
+   if existing_actor: 
     abort (400)
    
    
@@ -84,6 +85,7 @@ def create_app(test_config=None):
     # actor.movies = [movies]
     actor.insert()
     return jsonify({
+                'Existinggg': existing_actor,
                 'success ': True
             }),200
 
