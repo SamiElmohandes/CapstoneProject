@@ -8,13 +8,13 @@ database_name = "castingagency"
 #database_path = "postgres://localhost:5432/castingagency"
 
 
-#database_path ='postgresql://postgres@localhost:5432/castingagency'
+database_path ='postgresql://postgres@localhost:5432/castingagency'
 
 #database_path = os.environ['DATABASE_URL']
 
 
 
-database_path = os.environ.get('DATABASE_URL', 'postgres://iyrlacsqgsgzhw:7761bbdc56821fabff1b0a90b793bcd503b8a10d3a41d89931eb16423fe9c673@ec2-34-194-198-176.compute-1.amazonaws.com:5432/d60pq1ui1787g6')
+#database_path = os.environ.get('DATABASE_URL', 'postgres://iyrlacsqgsgzhw:7761bbdc56821fabff1b0a90b793bcd503b8a10d3a41d89931eb16423fe9c673@ec2-34-194-198-176.compute-1.amazonaws.com:5432/d60pq1ui1787g6')
 
 
 
