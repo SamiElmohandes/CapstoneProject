@@ -236,7 +236,7 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X PATCH -H 'Accept: applicatio
 ```
 
 
-  - Update the actor of the given ID if it exists using the submitted name, age, and gender. Return a the actor record modified and the success value.
+  - Update the actor of the given ID if it exists using the submitted name, age, and gender. Returns the actor record modified and the success value.
 
 
 
@@ -254,108 +254,83 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X PATCH -H 'Accept: applicatio
 ```
 
 
+- PATCH '/movies'
+```bash
+$ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X PATCH -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"title":"Toy Story","release_date":"3/1994"}' https://finalfsndagency.herokuapp.com/movies/2
+```
 
 
-#### DELETE /questions/<question_id>
-* Deletes the question with the specified ID
-* Request arguments: question_id
-* Curl Sample: curl -X "DELETE" http://localhost:5000/questions/<question_id>
-* Sample Response
+  - Update the movie of the given ID if it exists using the submitted title and release_date . Returns the movie record modified and the success value.
 
-         {
-           "deleted": 2,
-           "success": true
 
-             }
-             
-             
-#### POST /questions
-* Adds a new question 
-* Request arguments: question_question , question_answer , question_difficulty , question_category
-* Curl Sample: curl -X POST -H "Content-Type: application/json" -d '{"question":"value1","answer":"value2","difficulty":"2","category":"3"}' http://localhost:5000/questions
 
-* Sample Response
-
-         {
-           "success": true
-            
-            }
-             
-#### SEARCH /questions    
-* Searches for a question with the keyword provided 
-* Request arguments: SearchTerm
-* Curl Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"searchTerm": "beetle"}'
-* Sample Response
-
-         {
-           "questions": [
-         {
-      "answer": "Scarab",
-      "category": 4,
-      "difficulty": 4,
-      "id": 23,
-      "question": "Which dung beetle was worshipped by the ancient Egyptians?"
-       }
-       ],
-       "success": true,
-       "totalQuestions": 1
-       }
-   
-   
-#### GET QUESTIONS BY CATEGORY /categories/<int:id>/questions
-* Searches for questions within the specified category. 
-* Request arguments: Category ID
-* Curl Sample: curl http://127.0.0.1:5000/categories/(category_id)/questions
-* Sample Response
-
+```js
+{
+  "actor": 
       {
-      "currentCategory": "Science"
-      "questions": [
-        {
-      "answer": "The Liver",
-      "category": 1,
-      "difficulty": 4,
-      "id": 20,
-      "question": "What is the heaviest organ in the human body?"
-       },
-      {
-      "answer": "Alexander Fleming",
-      "category": 1,
-      "difficulty": 3,
-      "id": 21,
-      "question": "Who discovered penicillin?"
-       },
-       {
-      "answer": "Blood",
-      "category": 1,
-      "difficulty": 4,
-      "id": 22,
-      "question": "Hematology is a branch of medicine involving the study of what?"
-      }
-      ],
-      "success": true,
-      "totalQuestions": 3
-       }
-        
-        
-#### POST QUIZ /quizzes
-* Play the quiz . 
-* Request arguments: previous_questions , quiz_category
-* Curl Sample Example: curl curl -X POST http://localhost:5000/quizzes -d'{"previous_questions": [5,9], "quiz_category": {"id": 4, "type":   "History"}}' -H "Content-Type: application/json"
+        "id": 1,
+        "title": "Toy Story",
+	"release_date": "3/1994"
+      } ,
+  "success ": true
+}
+```
 
 
-* Sample Response
+- DELETE '/actors'
 
-      {
-      "question": {
-      "answer": "George Washington Carver",
-      "category": 4,
-      "difficulty": 2,
-      "id": 12,
-      "question": "Who invented Peanut Butter?"
-       },
-      "success": true
-        }
-        
-        
-        
+```bash
+$ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X DELETE https://finalfsndagency.herokuapp.com/actors/1
+```
+
+
+  - Deletes the actor of the given ID if it exists. Returns  deleted actor id and success value.
+
+
+```js
+{
+  "deleted": 1
+  "success": true,
+  
+}
+
+```
+
+
+- DELETE '/movies'
+
+```bash
+$ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X DELETE https://finalfsndagency.herokuapp.com/movies/1
+```
+
+
+  - Deletes the movie of the given ID if it exists. Returns  deleted movie id and success value.
+
+
+```js
+{
+  "deleted": 1
+  "success": true,
+  
+}
+
+```
+
+
+### Users
+
+This app has 3 users. each user has his own privileges.
+
+- Casting Assistant
+	- Can view actors and movies
+
+- Casting Director
+	- All permissions of a Casting Assistant.
+	- Add or delete an actor from the database
+	- Modify actors or movies
+
+- Executive Producer
+	- All permissions of a Casting Director.
+	- Add or delete a movie from the database
+
+Please Note, to use any endpoint, you must send the request with user access token in Authorization header, which are provided in `setup.sh`.
