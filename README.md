@@ -155,8 +155,8 @@ If the error stems from the Authorization or Authentication (auth.py)
 
 Following is the demonstration of each endpoint.
 
-- GET '/actors'
-	```bash
+#### GET /actors
+```bash
 $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X GET https://finalfsndagency.herokuapp.com/actors
 ```
   - Return a list of actors, number of actors, success value
@@ -175,8 +175,8 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X GET https://finalfsndagency.
   "success ": true,
 }
 ```
-- GET '/movies'
-	```bash
+#### GET /movies
+```bash
 $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X GET https://finalfsndagency.herokuapp.com/movies
 ```
   - Return a list of movies, number of movies, success value
@@ -195,7 +195,7 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X GET https://finalfsndagency.
 }
 ```
 
-- POST '/actors'
+#### POST /actors
 ```bash
 $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"name":"Amir","age":24,"gender":"male"}' https://finalfsndagency.herokuapp.com/actors
 ```
@@ -214,7 +214,7 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X POST -H 'Accept: application
 
 
 
-- POST '/movies'
+#### POST /movies
 ```bash
 $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"title":"Hello All","release_date":"21/2121"}' https://finalfsndagency.herokuapp.com/movies
 ```
@@ -230,7 +230,7 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X POST -H 'Accept: application
 
 ```
 
-- PATCH '/actors'
+#### PATCH /actors
 ```bash
 $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X PATCH -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"name":"Sam","age":24,"gender":"male"}' https://finalfsndagency.herokuapp.com/actors/1
 ```
@@ -254,7 +254,7 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X PATCH -H 'Accept: applicatio
 ```
 
 
-- PATCH '/movies'
+#### PATCH /movies
 ```bash
 $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X PATCH -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"title":"Toy Story","release_date":"3/1994"}' https://finalfsndagency.herokuapp.com/movies/2
 ```
@@ -277,7 +277,7 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X PATCH -H 'Accept: applicatio
 ```
 
 
-- DELETE '/actors'
+#### DELETE /actors
 
 ```bash
 $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X DELETE https://finalfsndagency.herokuapp.com/actors/1
@@ -297,7 +297,7 @@ $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X DELETE https://finalfsndagen
 ```
 
 
-- DELETE '/movies'
+#### DELETE /movies
 
 ```bash
 $ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X DELETE https://finalfsndagency.herokuapp.com/movies/1
