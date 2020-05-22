@@ -93,7 +93,7 @@ Errors are returned in JSON format as following:
 
  
     {
-      "success": False,
+      "success ": False,
       
       "error": 404,
       
@@ -101,23 +101,32 @@ Errors are returned in JSON format as following:
     }
     
     {
-      "success": False,
+      "success ": False,
       "error": 422,
       "message": "unprocessable "
     }
     
     {
-      "success": False,
+      "success ": False,
       "error": 400,
       "message": "bad request"
     }
     
     {
-      "success": False,
+      "success ": False,
       "error": 500,
       "message": "Internal Server Error"
     }
-    
+
+
+The last error handler uses AuthError which is set in the auth.py file .
+
+    {
+      "success ": False,
+      "error": error.status_code,
+      "message": error.description
+    }
+
 
 
 The API will return the following error types:
@@ -127,47 +136,126 @@ The API will return the following error types:
 * 422: unable to process request
 * 500: internal server error
 
+If the error stems from the Authorization or Authentication (auth.py)
+* 400: bad request
+* 401: Unauthorized Error
+
+
 ### Endpoints
-#### GET /categories
-* Fetches a dictionary of all available categories
-* Request arguments: None
-* Curl Sample: curl http://127.0.0.1:5000/categories
-* Sample Response   
-   
-           {
-            "categories": [
-            "Science",
-            "Art",
-            "Geography",
-            "History",
-            "Entertainment",
-            "Sports"
-              ],
-            "success": true
 
-        }
+- GET '/actors'
+- GET '/movies'
+- POST '/actors'
+- POST '/movies'
+- PATCH '/actors/<int:id>'
+- PATCH '/movies/<int:id>'
+- DELETE '/actors/<int:id>'
+- DELETE '/movies/<int:id>'
 
-#### GET /questions
-* Fetches a dictionary of all questions from all categories
-* Request arguments: None
-* Curl Sample: curl http://127.0.0.1:5000/questions OR http://127.0.0.1:5000/questions?page=[number]
-* Sample Response   
-   
-           {
-          "answer": "Agra",
-          "category": 3,
-          "difficulty": 2,
-          "id": 15,
-          "question": "The Taj Mahal is located in which Indian city?"
 
-            }, 
-             "success": true,
-             "totalQuestions": 27
+Following is the demonstration of each endpoint.
 
-             }
-             
-             
-             
+- GET '/actors'
+	```bash
+$ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X GET https://finalfsndagency.herokuapp.com/actors
+```
+  - Return a list of actors, number of actors, success value
+
+```js
+{
+  "Actors": [
+      {
+        "age": 25,
+        "gender": "Male",
+        "id": 1,
+        "name": "Sami Elmohandes"
+      }
+  ],
+  "Total_no_of_actors": 1
+  "success ": true,
+}
+```
+- GET '/movies'
+	```bash
+$ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X GET https://finalfsndagency.herokuapp.com/movies
+```
+  - Return a list of movies, number of movies, success value
+
+```js
+{
+  "movies": [
+      {
+        "id": 1,
+        "release_date": "8/2008",
+        "title": "The Dark Knight",
+      }
+  ],
+  "no_of_movies": 1
+  "success ": true,
+}
+```
+
+- POST '/actors'
+```bash
+$ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"name":"Amir","age":24,"gender":"male"}' https://finalfsndagency.herokuapp.com/actors
+```
+
+  - Create a new actor using the submitted name, age, and gender. Return Existing parameter(null if success or else if another actor with the same name exists the existing actor record ), success value.
+
+
+```js
+{
+  "Existing": null
+  "success ": true,
+}
+
+```
+
+
+
+
+- POST '/movies'
+```bash
+$ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"title":"Hello All","release_date":"21/2121"}' https://finalfsndagency.herokuapp.com/movies
+```
+
+  - Create a new movie using the submitted title and release_date. Return Existing parameter(null if success or else if another actor with the same name exists the existing actor record ), success value.
+
+
+```js
+{
+  "Existing": null
+  "success ": true,
+}
+
+```
+
+- PATCH '/actors'
+```bash
+$ curl -H "Authorization: Bearer <ACCESS_TOKEN>" -X PATCH -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"name":"Sam","age":24,"gender":"male"}' https://finalfsndagency.herokuapp.com/actors/1
+```
+
+
+  - Update the actor of the given ID if it exists using the submitted name, age, and gender. Return a the actor record modified and the success value.
+
+
+
+```js
+{
+  "actor": 
+      {
+        "age": 24,
+        "gender": "male",
+        "id": 1,
+        "name": "Sam"
+      } ,
+  "success ": true,
+}
+```
+
+
+
+
 #### DELETE /questions/<question_id>
 * Deletes the question with the specified ID
 * Request arguments: question_id
