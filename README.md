@@ -48,24 +48,45 @@ pip install -r requirements.txt
 
 This will install all of the required packages we selected within the `requirements.txt` file.
 
-### Backend
+## Running the API Locally 
 
-The `./backend` directory contains a partially completed Flask and SQLAlchemy server. You will work primarily in app.py to define your endpoints and can reference models.py for DB and SQLAlchemy setup. 
+It is important to make sure the virtual environment is activated with all the dependencies installed and in place in the directory .
 
-### Frontend
+To run the server, execute:
 
-The `./frontend` directory contains a complete React frontend to consume the data from the Flask server. You will need to update the endpoints after you define them in the backend. Those areas are marked with TODO and can be searched for expediency. 
+```bash
+source setup.sh
+export FLASK_APP=app.py
+flask run --reload
+```
+Note : The command `source setup.sh` sets some environment variables used by the app.
 
-Pay special attention to what data the frontend is expecting from each API response to help guide how you format your API. 
+Testing
+To run the tests, run
 
-[View the README.md within ./frontend for more details.](./frontend/README.md)
+```bash 
+$ python test_app.py
+```
+It should give this response if everything went fine:
+
+```bash
+$ python test_app.py
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 15.376s
+
+OK
+
+```
+
 
 ## API Documentation
 
 ### Introduction
 
-* Base URL:  This application's backend is hosted at http://127.0.0.1:5000/
-* Authentication: This API does not require authentication.
+* Base URL:  https://finalfsndagency.herokuapp.com/
+
+* Authentication: This app has 3 users. Each has his own token which are provided in setup.sh file. Details about each user privlages are provided below.
 
 ### Error Handling
 Errors are returned in JSON format as following:
