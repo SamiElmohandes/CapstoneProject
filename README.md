@@ -1,10 +1,10 @@
 # Full Stack API Final Project
 
-## Full Stack Trivia
+## Casting Agency
 
-Udacity is invested in creating bonding experiences for its employees and students. A bunch of team members got the idea to hold trivia on a regular basis and created a  webpage to manage the trivia app and play the game, but their API experience is limited and still needs to be built out. 
+Udacity is invested in creating bonding experiences for its employees and students. It has been an honor and quite an interesting challenge working on this course where I got exposed to great course content and projects.
 
-That's where you come in! Help them finish the trivia app so they can start holding trivia and seeing who's the most knowledgeable of the bunch. The application must:
+This is the final project in the course where we were tasked with building a web app for a casting agency where users can add movies and actors. This project uses python, flask and postgresql for it's backend and is hosted on heruko.
 
 1) Display questions - both all questions and by category. Questions should show the question, category and difficulty rating by default and can show/hide the answer. 
 2) Delete questions.
