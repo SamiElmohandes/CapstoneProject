@@ -6,30 +6,47 @@ Udacity is invested in creating bonding experiences for its employees and studen
 
 This is the final project in the course where we were tasked with building a web app for a casting agency where users can add movies and actors. This project uses python, flask and postgresql for it's backend and is hosted on heruko.
 
-1) Display questions - both all questions and by category. Questions should show the question, category and difficulty rating by default and can show/hide the answer. 
-2) Delete questions.
-3) Add questions and require that they include question and answer text.
-4) Search for questions based on a text query string.
-5) Play the quiz game, randomizing either all questions or within a specific category. 
+1) The code such as (app.py , models.py , test_app.py) adheres to PIP8 style guidelines
 
-Completing this trivia app will give you the ability to structure plan, implement, and test an API - skills essential for enabling your future applications to communicate with others. 
+2) No frontend is developed for this app, you can use it using Curl or Postman
 
-## Tasks
+3) Database modeling with postgres & sqlalchemy (see models.py)
 
-There are `TODO` comments throughout project. Start by reading the READMEs in:
+4) API to performance CRUD Operations on database with Flask (see app.py)
 
-1. [`./frontend/`](./frontend/README.md)
-2. [`./backend/`](./backend/README.md)
+5) Automated testing with Unittest (see test_app)
 
-We recommend following the instructions in those files in order. This order will look familiar from our prior work in the course.
+6) Authorization RBAC with Auth0 (see auth.py)
 
-## Starting and Submitting the Project
+7) Postman Collection of Endpoints tests (see CapstoneCollection.postman_collection)
 
-[Fork](https://help.github.com/en/articles/fork-a-repo) the [project repository]() and [Clone](https://help.github.com/en/articles/cloning-a-repository) your forked repository to your machine. Work on the project locally and make sure to push all your changes to the remote repository before submitting the link to your repository in the Classroom. 
+8) Deployment on Heroku (access this app through the following link --> https://finalfsndagency.herokuapp.com/ )
 
-## About the Stack
 
-We started the full stack application for you. It is desiged with some key functional areas:
+
+## Getting Started
+
+### Installing Dependencies
+
+#### Python 3.7
+
+Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
+
+
+#### Virtual Enviornment
+
+I recommend working within a virtual environment whenever using Python for projects. This keeps dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for the platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+
+
+#### PIP Dependencies
+
+Once you have your virtual environment setup and running, install dependencies by running:
+
+```bash
+pip install -r requirements.txt
+```
+
+This will install all of the required packages we selected within the `requirements.txt` file.
 
 ### Backend
 
